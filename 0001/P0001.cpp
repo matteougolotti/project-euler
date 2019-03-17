@@ -6,9 +6,7 @@ int naturalSum(int n) {
 
 int count(int n) {
   --n;
-  return 3 * naturalSum(n / 3)
-    + 5 * naturalSum(n / 5)
-    - 15 * naturalSum(n / 15);
+  return 3 * naturalSum(n / 3) + 5 * naturalSum(n / 5) - 15 * naturalSum(n / 15);
 }
 
 int main() {
