@@ -5,10 +5,7 @@ def reverse(n):
 def is_palindrome(n):
     s = str(n)
     rev = reverse(s)
-    if rev == s:
-        return True
-    else:
-        return False
+    return rev == s
 
 def has_six_digits(n):
     s = str(n)
