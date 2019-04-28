@@ -1,6 +1,6 @@
 import sys
 
-def fibs(n : int) -> int:
+def fibs(n):
     a = 0
     b = 1
     numbers = []
@@ -11,8 +11,8 @@ def fibs(n : int) -> int:
         b = c
     return numbers
 
-t = int(input().strip())
+t = int(input())
 for a0 in range(t):
-    n = int(input().strip())
+    n = int(input())
     s = sum([ x for x in fibs(n) if x % 2 == 0 ])
-    print(s)
+    print(str(s))

@@ -1,4 +1,4 @@
-#include <cassert>
+#include <iostream>
 
 int naturalSum(int n) {
   return n * (n + 1) / 2;
@@ -10,8 +10,14 @@ int count(int n) {
 }
 
 int main() {
-  assert(23 == count(10));
-  assert(2318 == count(100));
+  int t = 0;
+  std::cin >> t;
+  for (int i = 0; i < t; ++i) {
+    int n = 0;
+    std::cin >> n;
+    int result = count(n);
+    std::cout << result << std::endl;
+  }
 
   return 0;
 }
