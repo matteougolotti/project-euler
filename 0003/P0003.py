@@ -11,8 +11,8 @@ def largest_prime_factor(n):
   return max(prime_factors)
 
 if __name__ == "__main__":
-  t = int(input().strip())
+  t = int(input())
   for i in range(t):
-    n = int(input().strip())
+    n = int(input())
     gpf = largest_prime_factor(n)
     print(gpf)
