@@ -1,7 +1,4 @@
 {-# LANGUAGE UnicodeSyntax #-}
--- main ∷ IO ()
--- main = print (naturalSum 100)
-
 import           Data.List
 
 main ∷ IO()
