@@ -1,8 +1,7 @@
 {-# LANGUAGE UnicodeSyntax #-}
-import           Data.List
 
 main ∷ IO()
-main = interact $ intercalate "\n" . fmap (show . count . read) . tail . lines
+main = interact $ unlines . fmap (show . count . read) . tail . lines
 
 naturalSum ∷ Int → Int
 naturalSum n = n * (n + 1) `quot` 2

@@ -1,7 +1,6 @@
 {-# LANGUAGE UnicodeSyntax #-}
-import           Data.List
 
-main = interact $ intercalate "\n" . fmap (show . count) . adapt . tail . lines
+main = interact $ unlines . fmap (show . count) . adapt . tail . lines
 
 adapt ∷ [String] → [(Int, [Int])]
 adapt []            = []

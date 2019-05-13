@@ -1,11 +1,11 @@
-import Data.List
+{-# LANGUAGE UnicodeSyntax #-}
 
-main = interact $ intercalate "\n" . fmap (show . largestPalindrome . read) . tail . lines
+main = interact $ unlines . fmap (show . largestPalindrome . read) . tail . lines
 
-isValidPalindrome :: String -> Bool
+isValidPalindrome ∷ String → Bool
 isValidPalindrome s = length s == 6 && s == reverse s
 
-largestPalindrome :: Int -> Int
+largestPalindrome ∷ Int → Int
 largestPalindrome n =
   let palindromes = [ p | i <- [100..999],
                           j <- [i..999],

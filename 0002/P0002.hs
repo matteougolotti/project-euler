@@ -1,8 +1,7 @@
 {-# LANGUAGE UnicodeSyntax #-}
-import           Data.List
 
 main ∷ IO ()
-main = interact $ \ s -> intercalate "\n" $ show . sumOfEvenFibonacci . read <$> (tail . lines) s
+main = interact $ \ s -> unlines $ show . sumOfEvenFibonacci . read <$> (tail . lines) s
 
 sumOfEvenFibonacci ∷ Int → Int
 sumOfEvenFibonacci n = sum [ x | x <- takeWhile (<= n) fibs, x `mod` 2 == 0 ]

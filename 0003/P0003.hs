@@ -1,7 +1,6 @@
 {-# LANGUAGE UnicodeSyntax #-}
-import           Data.List
 
-main = interact $ intercalate "\n" . fmap (show . largestPrimeFactorial . read) . tail . lines
+main = interact $ unlines . fmap (show . largestPrimeFactorial . read) . tail . lines
 
 largestPrimeFactorial ∷ Int → Int
 largestPrimeFactorial = maximum . primes

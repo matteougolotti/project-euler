@@ -1,7 +1,6 @@
 {-# LANGUAGE UnicodeSyntax #-}
-import           Data.List
 
-main = interact $ intercalate "\n" . fmap (show . leastCommonMultiple . range . read) . tail . lines
+main = interact $ unlines . fmap (show . leastCommonMultiple . range . read) . tail . lines
 
 range ∷ Int → [Int]
 range n = [1..n]
