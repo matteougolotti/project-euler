@@ -2,6 +2,7 @@
 
 (|>) x f = f x
 
+main :: IO ()
 main = interact $ unlines . fmap (show . count . read) . tail . lines
 
 count ∷ Int → Int
