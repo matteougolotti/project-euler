@@ -9,7 +9,7 @@ main = do
   countNthPrime t [3, 2] [2, 3]
 
 countNthPrime ∷ Int → [Int] → [Int] → IO ()
-countNthPrime 0 _ _     = return ()
+countNthPrime 0 _ _              = return ()
 countNthPrime i primes revprimes = do
   n <- readInt
   let (primes', revprimes') = prime n (head primes + 2) primes revprimes
